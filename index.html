@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Decimotercerpiso |</title>
+    <!-- separate CSS file: minimal, black/white aesthetic -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- header: stark and quiet -->
+        <header class="site-header">
+            <div class="logo">
+                <h1>MARCELO FABIAN</h1>
+                <p class="subtitle">Grabados</p>
+            </div>
+            <div class="studio-note">
+                decimotercerpiso | grabados
+            </div>
+        </header>
+
+        <!-- gallery grid: all works black and white -->
+        <div class="gallery">
+            <!-- artwork 1 -->
+            <figure class="artwork">
+                <div class="image-wrapper">
+                    <img src="./images/ave-maria.png" alt="linocut abstract bird composition" class="artwork-img"
+                        loading="lazy">
+                </div>
+                <figcaption>
+                    <span class="artwork-title">"Ave María"</span>
+                    <span class="artwork-meta">linocut · 30x30cm · 2025</span>
+                </figcaption>
+            </figure>
+
+            <!-- artwork 4 -->
+            <figure class="artwork">
+                <div class="image-wrapper">
+                    <img src="./images/la-encarnacion.jpeg" alt="linocut abstract landscape horizon" class="artwork-img"
+                        loading="lazy">
+                </div>
+                <figcaption>
+                    <span class="artwork-title">"La Encarnación"</span>
+                    <span class="artwork-meta">linocut · 50x50cm · 2024</span>
+                </figcaption>
+            </figure>
+
+            <!-- artwork 6 -->
+            <figure class="artwork">
+                <div class="image-wrapper">
+                    <img src="images/san-jorge.png" alt="linocut animal wolf abstraction" class="artwork-img"
+                        loading="lazy">
+                </div>
+                <figcaption>
+                    <span class="artwork-title">"San Jorge"</span>
+                    <span class="artwork-meta">linocut · 30x30cm · 2023</span>
+                </figcaption>
+            </figure>
+        </div>
+
+        <!-- subtle divider -->
+        <hr class="ink-divider">
+
+        <!-- artist statement & contact -->
+        <div class="info-panel">
+            <div class="statement">
+                <div class="label">STATEMENT</div>
+                <p>Linograbados realizados a partir de una matriz original, impresos a mano.</p>
+            </div>
+            <div class="contact">
+                <div class="label">STUDIO</div>
+                <div class="contact-details">
+                    hello@voidcarve.com<br>
+                    Asunción — PY
+                </div>
+            </div>
+        </div>
+
+        <div class="whatsapp-wrapper">
+            <a href="https://wa.me/595994151841?text=Hola%2C%20vi%20tu%20portfolio%20de%20grabados%20y%20me%20interesa%20tu%20trabajo"
+                class="whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                CONTACT
+            </a>
+        </div>
+
+        <footer class="site-footer">
+            <span>© 2025 VOID & CARVE — all linocut works black & white</span>
+            <!-- <span><a href="#">INK EDITIONS</a> — <a href="#">EXHIBITIONS</a></span> -->
+        </footer>
+    </div>
+
+    <!-- Lightbox Wizard Modal -->
+    <div id="lightbox" class="lightbox">
+        <button class="close-btn" id="close-lightbox">✕</button>
+        <button class="nav-btn prev-btn" id="prev-btn">‹</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" class="lightbox-image" src="" alt="">
+            <div class="lightbox-caption">
+                <div class="lightbox-title" id="lightbox-title"></div>
+                <div class="lightbox-meta" id="lightbox-meta"></div>
+            </div>
+        </div>
+        <button class="nav-btn next-btn" id="next-btn">›</button>
+    </div>
+
+    <script src="lightbox.js"></script>
+
+</body>
+
+</html>

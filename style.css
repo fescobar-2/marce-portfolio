@@ -1,0 +1,284 @@
+/* style.css — minimalist black & white linocut portfolio
+   Background: pure black. Images have NO background, NO borders.
+   Clean typography, sparse layout. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #eeeeee;
+  line-height: 1.4;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* main container — breathing room */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+/* === HEADER — stark, quiet, minimal === */
+.site-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #aaaaaa;
+  font-weight: 400;
+}
+
+.studio-note {
+  font-size: 0.75rem;
+  color: #888888;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+  padding-right: 1.2rem;
+}
+
+/* === GALLERY GRID — minimal, responsive === */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin: 2rem 0 1rem;
+}
+
+/* artwork card — no extra decoration */
+.artwork {
+  background: transparent;
+  transition: opacity 0.2s ease;
+}
+
+.artwork:hover {
+  opacity: 0.85;
+}
+
+/* image wrapper — NO background, NO border, completely transparent */
+.image-wrapper {
+  background-color: transparent;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: none;
+}
+
+/* images keep original colors — NO filters, transparent background */
+.artwork-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.25s cubic-bezier(0.2, 0, 0, 1);
+  background: transparent;
+}
+
+.artwork:hover .artwork-img {
+  transform: scale(1.02);
+}
+
+/* caption — minimal typography */
+.artwork figcaption {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.artwork-title {
+  font-size: 0.9rem;
+  font-weight: 450;
+  letter-spacing: -0.2px;
+  color: #f0f0f0;
+  text-transform: uppercase;
+  border-left: 2px solid #ffffff;
+  padding-left: 0.7rem;
+}
+
+.artwork-meta {
+  font-size: 0.7rem;
+  color: #7a7a7a;
+  letter-spacing: 0.02em;
+  padding-left: 0.9rem;
+}
+
+/* === ink divider — subtle line === */
+.ink-divider {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 3rem 0 2.5rem;
+}
+
+/* === info panel: artist statement & contact === */
+.info-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.statement {
+  max-width: 520px;
+}
+
+.contact {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 1.8rem;
+}
+
+.label {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #777777;
+  margin-bottom: 0.8rem;
+}
+
+.statement p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #cacaca;
+}
+
+.contact-details {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #cccccc;
+  font-family: monospace;
+  letter-spacing: -0.2px;
+}
+
+/* === footer — simple, minimal === */
+.site-footer {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.7rem;
+  color: #5a5a5a;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.site-footer a {
+  color: #8a8a8a;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+/* === responsive adjustments === */
+@media (max-width: 680px) {
+  .container {
+    padding: 1.25rem 1rem 2rem;
+  }
+  
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  
+  .studio-note {
+    border-right: none;
+    padding-right: 0;
+  }
+  
+  .gallery {
+    gap: 1.8rem;
+  }
+  
+  .artwork-title {
+    font-size: 0.8rem;
+  }
+  
+  .info-panel {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .contact {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 1rem;
+  }
+  
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* === selection / utility === */
+::selection {
+  background: #ffffff20;
+  color: #ffffff;
+}
+
+/* images have no forced background — completely transparent */
+img {
+  background: transparent;
+}
+
+.whatsapp-wrapper {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background: transparent;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 0.8rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.2s ease;
+}
+
+.whatsapp-btn:hover {
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
